@@ -1,0 +1,76 @@
+.header {
+    @extend .gridBaseLayout;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    @media screen and (min-width: 1230px) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    &__logo {
+        grid-column-start: 1;
+        justify-self: left;
+
+        svg {
+            width: 65px;
+
+            @media screen and (min-width: 1230px) {
+                width: 73px;
+            }
+        }
+    }
+
+    &__info {
+        grid-column-start: 3;
+        grid-column-end: span 2;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 16px;
+        color: $color-primary;
+        justify-self: right;
+
+        @media screen and (min-width: 1230px) {
+            grid-column-start: 8;
+            grid-column-end: span 3;
+        }
+
+        &--text {
+            font-family: $sonoma-medium;
+            display: none;
+            font-size: 12px;
+
+            @media screen and (min-width: 1230px) {
+                display: block;
+            }
+        }
+    }
+
+    &__phone {
+        grid-column-start: 5;
+        grid-column-end: span 2;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $color-primary;
+
+        @media screen and (min-width: 1230px) {
+            grid-column-start: 11;
+            grid-column-end: span 2;
+        }
+
+        span {
+            font-family: $sonoma-bold;
+            font-size: 15px;
+
+            @media screen and (min-width: 384px) {
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 1230px) {
+                font-size: 18px;
+            }
+        }
+    }
+}

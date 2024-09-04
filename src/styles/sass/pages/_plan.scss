@@ -1,0 +1,213 @@
+.plans {
+    @extend .gridBaseLayout;
+    padding-top: 32px;
+    padding-bottom: 132px;
+    min-height: calc(100vh - 130px);
+
+    @media screen and (min-width: 1230px) {
+        padding-top: 40px;
+        padding-bottom: 100px;
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        grid-column-start: 1;
+        grid-column-end: span 4;
+
+        @media screen and (min-width: 1230px) {
+            grid-column-start: 4;
+            grid-column-end: span 6;
+        }
+    }
+
+    &__title {
+        font-family: $sonoma-medium;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -0.2px;
+        text-align: left;
+        color: $color-secondary;
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 1230px) {
+            font-size: 40px;
+            line-height: 48px;
+            letter-spacing: -0.6px;
+            text-align: center;
+        }
+    }
+
+    &__description {
+        font-family: $sonoma-light;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        text-align: left;
+        letter-spacing: 0.1px;
+
+        @media screen and (min-width: 1230px) {
+            text-align: center;
+        }
+    }
+
+    &__options {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        display: grid;
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 32px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        input {
+            display: none;
+        }
+
+        @media screen and (min-width: 1230px) {
+            grid-column-start: 4;
+            grid-column-end: span 6;
+            flex-direction: row;
+            gap: 32px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
+
+    &__plans {
+        grid-column-start: 1;
+        grid-column-end: span 4;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        max-width: 928px;
+        width: 100%;
+        height: 107%;
+        overflow: auto;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        ul {
+            margin-left: -16px;
+            gap: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__recommended {
+            font-family: $sonoma-medium;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.4px;
+            padding: 2px 8px;
+            background-color: $color-recommended;
+            border-radius: 6px;
+            width: fit-content;
+            margin-bottom: 10px;
+            margin-top: -30px;
+        }
+
+        &__title {
+            font-family: $sonoma-bold;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.2px;
+            color: $color-secondary;
+            margin-bottom: 24px;
+        }
+
+        &__costTitle {
+            font-family: $sonoma-light;
+            font-weight: 900;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.6px;
+            color: $color-tertiary;
+        }
+
+        &__previewCost {
+            font-family: $sonoma-regular;
+            font-weight: 400;
+            text-decoration: line-through;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: -0.2px;
+            color: $color-tertiary;
+        }
+
+        &__price {
+            font-family: $sonoma-bold;
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 28px;
+            letter-spacing: -0.2px;
+            color: $color-secondary;
+        }
+
+        &__line {
+            border: 1px solid $color-line-primary;
+            width: 100%;
+            margin: 24px 0;
+        }
+
+        &__description {
+            font-family: $sonoma-light;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            letter-spacing: 0.1px;
+            color: $color-secondary;
+        }
+
+        .card--noHover {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 595px;
+            max-width: 288px;
+            padding-top: 37px;
+            width: 232px;
+            min-width: 224px;
+
+            @media screen and (max-width: 1024px) {
+                &:first-child {
+                    margin-left: 1rem;
+                }
+                &:last-child {
+                    margin-right: 1rem;
+                }
+            }
+
+            @media screen and (min-width: 1230px) {
+                padding-top: 65px;
+            }
+
+            >div {
+                position: relative;
+
+                .plans__plans__image {
+                    position: absolute;
+                    right: 0;
+                    width: 56px;
+                    height: 56px;
+                }
+            }
+        }
+
+        button {
+            width: 224px;
+        }
+
+        @media screen and (min-width: 1230px) {
+            grid-column-start: 2;
+            grid-column-end: span 10;
+            grid-template-columns: 1fr 1fr 1fr;
+            overflow: visible;
+        }
+    }
+}

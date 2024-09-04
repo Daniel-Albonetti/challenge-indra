@@ -1,0 +1,80 @@
+.loader {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.button {
+
+    &--black {
+        font-family: $sonoma-bold;
+        border-radius: 40px;
+        border: 0;
+        padding: 16px 40px;
+        color: $color-white;
+        background-color: $color-button-primary;
+        min-width: 336px;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        cursor: pointer;
+
+        @media screen and (min-width: 1272px) {
+            padding: 18px 37px;
+            min-width: 195px;
+            line-height: 24px;
+            font-size: 20px;
+        }
+    }
+
+    &--pink {
+        border-radius: 32px;
+        padding: 14px 32px;
+        background-color: $color-button-secondary;
+        color: $color-white;
+        border: none;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0.4px;
+        cursor: pointer;
+    }
+
+    &__back {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        cursor: pointer;
+
+        p {
+            color: $color-quaternary;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 0.4px;
+        }
+
+        &__button {
+            color: $color-border-circle;
+            border-radius: 50px;
+            width: 24px;
+            height: 24px;
+            border: 2px solid;
+            font-size: 20px;
+            margin-right: 16px;
+
+            &--color {
+                width: 20px;
+                font-size: 17px;
+                height: 20px;
+                margin-right: 8px;
+                color: $color-quaternary;
+            }
+        }
+
+    }
+}
